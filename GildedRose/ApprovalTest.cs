@@ -14,14 +14,13 @@ namespace GildedRose
         [Test]
         public void ThirtyDays()
         {
-            StringBuilder fakeoutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeoutput));
+            StringBuilder fakeOutput = new StringBuilder();
+            Console.SetOut(new StringWriter(fakeOutput));
             Console.SetIn(new StringReader("a\n"));
 
-            Program.Main(new string[] { });
-            String output = fakeoutput.ToString();
+            Program.Main();
+            string output = fakeOutput.ToString();
             Approvals.Verify(output);
         }
     }
-
 }

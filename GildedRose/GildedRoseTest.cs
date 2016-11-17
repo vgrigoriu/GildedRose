@@ -9,10 +9,10 @@ namespace GildedRose
         [Test()]
         public void Foo()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-            GildedRose app = new GildedRose(Items);
+            IList<Item> items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
+            GildedRose app = new GildedRose(items);
             app.UpdateQuality();
-            Assert.AreEqual("fixme", Items[0].Name);
+            Assert.AreEqual("fixme", items[0].Name);
         }
     }
 }
